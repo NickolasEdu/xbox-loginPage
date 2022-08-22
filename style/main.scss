@@ -1,0 +1,81 @@
+$main-color: #107C10;
+$button-color: #00a2ed;
+$alpha: #000;
+
+@mixin box-shadow() {
+    box-shadow: 2px 2px 4px -2px #000;
+}
+
+@at-root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+body {
+    background-color: $main-color;
+}
+
+
+.container {
+    @extend .flex;
+
+    .formBox {
+        background-color: #FFF;
+        @include box-shadow();
+        padding: 20px;
+        width: 350px;
+        height: 250px;
+
+        span {
+            display: block
+        }
+
+        input {
+            width: 100%;
+        }
+
+        button {
+            background-color: darken($color: $button-color, $amount: 10%);
+            color: #FFF;
+            box-shadow: none;
+            padding: 3px 18px;
+        }
+    }
+}
+
+
+.options {
+    @include box-shadow();
+    @extend .flex;
+    background-color: #FFF;
+    margin: 20px;
+    width: 350px;
+    padding: 20px;
+    flex-direction: row;
+
+    &:hover {
+        background-color: gray;
+    }
+}
+
+footer {
+    background-color: rgba($color: #000000, $alpha: 9.0);
+    color: #FFF;
+    @extend .flex;
+    height: 20px;
+
+    ul {
+        list-style: none;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: end;
+    }
+}
