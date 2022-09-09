@@ -6,26 +6,24 @@ $alpha: #000;
     box-shadow: 2px 2px 4px -2px #000;
 }
 
-@at-root {
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body {
+    background-color: $main-color;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column
-}
-
-body {
-    background-color: $main-color;
-}
-
 
 .container {
     @extend .flex;
+    margin: 80px auto auto auto;
 
     .formBox {
         background-color: #FFF;
@@ -35,7 +33,7 @@ body {
         height: 250px;
 
         span {
-            display: block
+            display: block;
         }
 
         input {
@@ -55,11 +53,9 @@ body {
 .options {
     @include box-shadow();
     @extend .flex;
-    background-color: #FFF;
-    margin: 20px;
     width: 350px;
-    padding: 20px;
     flex-direction: row;
+    background-color: #FFF;
 
     &:hover {
         background-color: gray;
@@ -67,15 +63,24 @@ body {
 }
 
 footer {
-    background-color: rgba($color: #000000, $alpha: 9.0);
     color: #FFF;
-    @extend .flex;
-    height: 20px;
+    margin-bottom: 0;
+    margin-top: 105px;
 
-    ul {
-        list-style: none;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: end;
+    .low {
+        background-color: #000;
+        width: 100vw;
+
+        ul {
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+
+            li {
+                list-style: none;
+                margin: auto 5px;
+            }
+        }
     }
 }
