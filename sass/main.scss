@@ -18,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100%
 }
 
 
@@ -25,19 +26,28 @@ body {
     @extend .flex;
     margin: 80px auto auto auto;
 
+    header {
+        margin: 15px;
+    }
     .formBox {
         background-color: #FFF;
         @include box-shadow();
-        padding: 20px;
-        width: 350px;
-        height: 250px;
+        padding: 40px;;
+        width: 360px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
 
-        span {
+        h2 {
             display: block;
         }
 
         input {
             width: 100%;
+            border-top-width: 0;
+            border-left: 0;
+            border-right-width: 0;
         }
 
         button {
@@ -45,22 +55,35 @@ body {
             color: #FFF;
             box-shadow: none;
             padding: 3px 18px;
+            align-self: flex-end
+        }
+    }
+
+    .options {
+        @include box-shadow();
+        @extend .flex;
+        flex-direction: row;
+        width: 438px;
+        height: 50px;
+        flex-direction: row;
+        background-color: #FFF;
+        margin-top: 1em;
+
+        a {
+            display: flex;
+
+            img {
+                justify-content: flex-start;
+            }
+        }
+    
+        &:hover {
+            background-color: gray;
         }
     }
 }
 
 
-.options {
-    @include box-shadow();
-    @extend .flex;
-    width: 350px;
-    flex-direction: row;
-    background-color: #FFF;
-
-    &:hover {
-        background-color: gray;
-    }
-}
 
 footer {
     color: #FFF;

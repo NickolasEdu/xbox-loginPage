@@ -1,4 +1,4 @@
-.flex, .options, .container {
+.flex, .container .options, .container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,38 +10,57 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
 }
 
 .container {
   margin: 80px auto auto auto;
 }
+.container header {
+  margin: 15px;
+}
 .container .formBox {
   background-color: #FFF;
   box-shadow: 2px 2px 4px -2px #000;
-  padding: 20px;
-  width: 350px;
-  height: 250px;
+  padding: 40px;
+  width: 360px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.container .formBox span {
+.container .formBox h2 {
   display: block;
 }
 .container .formBox input {
   width: 100%;
+  border-top-width: 0;
+  border-left: 0;
+  border-right-width: 0;
 }
 .container .formBox button {
   background-color: #007fba;
   color: #FFF;
   box-shadow: none;
   padding: 3px 18px;
+  align-self: flex-end;
 }
-
-.options {
+.container .options {
   box-shadow: 2px 2px 4px -2px #000;
-  width: 350px;
+  flex-direction: row;
+  width: 438px;
+  height: 50px;
   flex-direction: row;
   background-color: #FFF;
+  margin-top: 1em;
 }
-.options:hover {
+.container .options a {
+  display: flex;
+}
+.container .options a img {
+  justify-content: flex-start;
+}
+.container .options:hover {
   background-color: gray;
 }
 
