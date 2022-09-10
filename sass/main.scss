@@ -18,51 +18,68 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 100%
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 .container {
     @extend .flex;
-    margin: 80px auto auto auto;
+    margin: 55px 0 0 0;
+    width: 100vw;
+    height: 100vh;
 
     header {
         margin: 15px;
     }
+
     .formBox {
         background-color: #FFF;
-        @include box-shadow();
         padding: 40px;;
         width: 360px;
-        height: 280px;
+        height: 250px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
 
-        h2 {
+
+        span {
             display: block;
+            margin: 10px 0;
+            font-size: 30px;
+            font-weight: 1500px;
         }
 
         input {
             width: 100%;
+            height: 30px;
             border-top-width: 0;
             border-left: 0;
             border-right-width: 0;
         }
 
+        p {
+            a {
+                text-decoration: none;
+                color: $button-color;
+            }
+        }
+
         button {
-            background-color: darken($color: $button-color, $amount: 10%);
+            border-color: #0067b8;
+            background-color: #0067b8;
             color: #FFF;
+            border: none;
             box-shadow: none;
             padding: 3px 18px;
-            align-self: flex-end
+            align-self: flex-end;
+            height: 35px;
+            width: 105px;
+            padding: 8px 18px
         }
     }
 
     .options {
         @include box-shadow();
-        @extend .flex;
-        flex-direction: row;
         width: 438px;
         height: 50px;
         flex-direction: row;
@@ -71,9 +88,20 @@ body {
 
         a {
             display: flex;
+            justify-items: flex-start;
+            margin-left: 38px;
+            text-decoration: none;
+            color: $alpha;
 
             img {
                 justify-content: flex-start;
+                width: 30px;
+                height: 30px;
+                margin-top: 10px;
+            }
+
+            p {
+                margin-left: 8px;
             }
         }
     
