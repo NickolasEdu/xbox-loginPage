@@ -11,21 +11,24 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
 }
 
 .container {
-  margin: 55px 0 0 0;
   width: 100vw;
-  height: 100vh;
+  height: 97.5vh;
+  margin: 0;
 }
 .container header {
-  margin: 15px;
+  margin: 18px auto;
 }
 .container .formBox {
+  box-shadow: 2px 2px 4px -2px #000;
+  font-size: 0.8125rem;
   background-color: #FFF;
   padding: 40px;
   width: 360px;
-  height: 250px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -84,27 +87,29 @@ body {
   margin-left: 8px;
 }
 .container .options:hover {
-  background-color: gray;
+  background-color: #d9d9d9;
 }
-
-footer {
+.container footer {
+  position: absolute;
+  bottom: 0;
   color: #FFF;
-  margin-bottom: 0;
-  margin-top: 105px;
+  width: 100%;
+  height: 25px;
+  font-size: 0.8125rem;
 }
-footer .low {
-  background-color: #000;
-  width: 100vw;
+.container footer .low {
+  background-color: rgba(0, 0, 0, 0.6);
 }
-footer .low ul {
+.container footer .low ul {
+  bottom: 0;
   height: 30px;
   display: flex;
   flex-direction: row;
   justify-content: end;
 }
-footer .low ul li {
+.container footer .low ul li {
   list-style: none;
-  margin: auto 5px;
+  margin: auto 15px;
 }
 
 /*# sourceMappingURL=main.css.map */
