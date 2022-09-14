@@ -93,7 +93,7 @@ body {
   position: absolute;
   bottom: 0;
   color: #FFF;
-  width: 100%;
+  width: 100vw;
   height: 25px;
   font-size: 0.8125rem;
 }
